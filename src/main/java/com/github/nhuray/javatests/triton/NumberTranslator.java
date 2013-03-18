@@ -5,6 +5,9 @@ package com.github.nhuray.javatests.triton;
  */
 public class NumberTranslator {
 
+    public static final int LOWER_BOUND = 0;
+    public static final int UPPER_BOUND = 999999;
+
     /**
      * Method translating number in plain english.
      *
@@ -12,8 +15,9 @@ public class NumberTranslator {
      * @return the number translated
      */
     public static String plainEnglish(int number) {
-        // Number is negative
-        if (number < 0) throw new IllegalArgumentException("Number should be greater than zero");
+        // Number is out of range
+        if (number < LOWER_BOUND || number > UPPER_BOUND)
+            throw new IllegalArgumentException("Number should be greater than zero and lower than one million.");
 
         // Processing digits (0 to 9)
         String digits = digit(number);
@@ -33,9 +37,7 @@ public class NumberTranslator {
 
         // Processing thousand (1000 to 999999)
         String thousands = thousand(number);
-        if (thousands != null) return thousands;
-
-        return null;
+        return thousands;
     }
 
 

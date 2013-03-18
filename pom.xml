@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.nhuray</groupId>
-    <artifactId>interview-tests</artifactId>
+    <artifactId>java-tests</artifactId>
     <version>1.0</version>
 
     <properties>

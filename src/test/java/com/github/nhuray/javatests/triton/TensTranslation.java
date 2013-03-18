@@ -1,4 +1,4 @@
-package com.github.nhuray.interview.triton;
+package com.github.nhuray.javatests.triton;
 
 import org.junit.Assume;
 

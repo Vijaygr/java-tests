@@ -7,13 +7,13 @@ public class DigitTranslation {
     private Integer digit;
     private String translation;
 
-    public DigitTranslation(Integer digit, String translation) {
-        Assume.assumeTrue(digit > 0 && digit < 10);
-        this.digit = digit;
+    public DigitTranslation(Integer number, String translation) {
+        Assume.assumeTrue(number >= 0 && number < 10);
+        this.digit = number;
         this.translation = translation;
     }
 
-    public Integer getDigit() {
+    public Integer getNumber() {
         return digit;
     }
 

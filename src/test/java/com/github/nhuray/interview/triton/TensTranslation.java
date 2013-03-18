@@ -2,19 +2,19 @@ package com.github.nhuray.interview.triton;
 
 import org.junit.Assume;
 
-public class TeenTranslation {
+public class TensTranslation {
 
-    private Integer teen;
+    private Integer tens;
     private String translation;
 
-    public TeenTranslation(Integer number, String translation) {
-        Assume.assumeTrue(number > 9 && number < 20);
-        this.teen = number;
+    public TensTranslation(Integer number, String translation) {
+        Assume.assumeTrue(number == 10 || number >= 20 && number < 100);
+        this.tens = number;
         this.translation = translation;
     }
 
     public Integer getNumber() {
-        return teen;
+        return tens;
     }
 
     public String getTranslation() {

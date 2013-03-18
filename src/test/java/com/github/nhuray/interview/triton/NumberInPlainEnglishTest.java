@@ -16,4 +16,16 @@ public class NumberInPlainEnglishTest {
         // Then the digit is written in plain english
         Assert.assertEquals("one", result);
     }
+
+    @Test
+    public void justTwo() throws Exception {
+        // Given a number
+        int number = 2;
+
+        // When we call the method plainEnglish
+        String result = NumberUtils.plainEnglish(number);
+
+        // Then the digit is written in plain english
+        Assert.assertEquals("two", result);
+    }
 }

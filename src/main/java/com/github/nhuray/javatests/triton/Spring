@@ -1,0 +1,29 @@
+<bean id="myTestBean" class="com.stw.core.person.Person" scope="prototype"
+      factory-method="createNew" depends-on="dataSource">
+    <property name="firstName" value="${first.name}"/>
+    <property name="phone" ref="phone"/>
+</bean>
+
+Ce fragment XML représente une configuration Spring.
+
+Spring est un conteneur léger qui prend en charge la création d’objets et la mise en relation d’objets par l’intermédiaire d’un fichier de configuration
+qui décrit les objets à fabriquer et les relations de dépendances entre ces objets.
+
+Dans cet exemple, le conteneur Spring doit instantier le bean dont la classe est 'com.stw.core.person.Person' sous le nom 'myTestBean' à l'aide de la
+méthode factory 'createNew' (méthode static définie au niveau de la classe 'com.stw.core.person.Person').
+
+Cependant avant de créer l'objet et de gérer son cycle de vie au niveau du conteneur Spring, il faut que des objets dont dépend le bean à créer
+aient déja été déclarés au niveau de Spring :
+
+  - Le bean 'datasource' qui est une dépendance explicite (depends-on) à la création du bean 'myTestBean'. Ce bean sera créé avant le bean 'myTestBean' si il est déclaré
+  - Le bean 'phone' qui doit être préalablement instantié avant d'être setté
+  - La propriété 'first.name' (surement une property d'un placeholder) doit avoir été chargé depuis un fichier de propriété (property file).
+
+Si toutes les dépendances entre beans sont satisfaites :
+
+ - Spring utilise la méthode factory (static) pour créer un objet de type 'com.stw.core.person.Person',
+ - Il affecte au champ 'firstName' (via un setter) la valeur de la propriété 'first.name'
+ - Il affecte au champ 'phone' (via un setter) l'objet (bean Spring) référencé sous le nom ou l'id 'phone'
+
+
+

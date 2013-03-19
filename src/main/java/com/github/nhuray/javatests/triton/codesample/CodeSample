@@ -1,0 +1,14 @@
+Question :
+----------
+
+    Can you supply a sample of code (or a link towards) which you would consider production ready, elegant and high quality.
+
+Answer :
+--------
+
+    Many open source projects have an elegant and high quality code.
+
+    For example Joda Time : https://github.com/JodaOrg/joda-time/blob/master/src/main/java/org/joda/time/DateTime.java
+
+
+

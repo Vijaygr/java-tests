@@ -88,54 +88,69 @@ public class NumberTranslatorTest {
 
     @Theory
     public void digits(DigitTranslation digitTranslation) throws Exception {
+        // Given a number
+        Integer number = digitTranslation.getNumber();
+
         // When we call the method plainEnglish
-        String result = NumberTranslator.plainEnglish(digitTranslation.getNumber());
+        String result = NumberTranslator.plainEnglish(number);
 
         // Then the digit is written in plain english
-        System.out.println("result = " + result);
+        System.out.println(number + " = " + result);
         assertEquals(digitTranslation.getTranslation(), result);
     }
 
 
     @Theory
     public void teens(TeenTranslation teenTranslation) throws Exception {
+        // Given a number
+        Integer number = teenTranslation.getNumber();
+
         // When we call the method plainEnglish
-        String result = NumberTranslator.plainEnglish(teenTranslation.getNumber());
+        String result = NumberTranslator.plainEnglish(number);
 
         // Then the digit is written in plain english
-        System.out.println("result = " + result);
+        System.out.println(number + " = " + result);
         assertEquals(teenTranslation.getTranslation(), result);
     }
 
     @Theory
     public void tens(TensTranslation tensTranslation) throws Exception {
+        // Given a number
+        Integer number = tensTranslation.getNumber();
+
         // When we call the method plainEnglish
-        String result = NumberTranslator.plainEnglish(tensTranslation.getNumber());
+        String result = NumberTranslator.plainEnglish(number);
 
         // Then the digit is written in plain english
-        System.out.println("result = " + result);
+        System.out.println(number + " = " + result);
         assertEquals(tensTranslation.getTranslation(), result);
     }
 
 
     @Theory
     public void hundreds(HundredTranslation hundredsTranslation) throws Exception {
+        // Given a number
+        int number = hundredsTranslation.getNumber();
+
         // When we call the method plainEnglish
-        String result = NumberTranslator.plainEnglish(hundredsTranslation.getNumber());
+        String result = NumberTranslator.plainEnglish(number);
 
         // Then the digit is written in plain english
-        System.out.println("result = " + result);
+        System.out.println(number + " = " + result);
         assertEquals(hundredsTranslation.getTranslation(), result);
     }
 
 
     @Theory
     public void thousands(ThousandTranslation thousandTranslation) throws Exception {
+        // Given a number
+        int number = thousandTranslation.getNumber();
+
         // When we call the method plainEnglish
-        String result = NumberTranslator.plainEnglish(thousandTranslation.getNumber());
+        String result = NumberTranslator.plainEnglish(number);
 
         // Then the digit is written in plain english
-        System.out.println("result = " + result);
+        System.out.println(number + " = " + result);
         assertEquals(thousandTranslation.getTranslation(), result);
     }
 

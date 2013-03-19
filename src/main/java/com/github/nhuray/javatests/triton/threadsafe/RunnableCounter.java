@@ -1,4 +1,4 @@
-package com.github.nhuray.javatests.triton.counter;
+package com.github.nhuray.javatests.triton.threadsafe;
 
 /**
  * Runnable which call 100 times Counter#increment() method.

@@ -1,4 +1,4 @@
-package com.github.nhuray.javatests.triton.counter;
+package com.github.nhuray.javatests.triton.threadsafe;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

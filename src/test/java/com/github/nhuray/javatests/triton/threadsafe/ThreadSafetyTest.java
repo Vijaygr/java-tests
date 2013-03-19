@@ -1,10 +1,10 @@
-package com.github.nhuray.javatests.triton.counter;
+package com.github.nhuray.javatests.triton.threadsafe;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class ThreadSafety {
+public class ThreadSafetyTest {
 
     @Test
     public void synchronizedObject() throws Exception {

@@ -1,14 +1,12 @@
 package com.github.nhuray.javatests.triton.stwando;
 
-import com.google.common.base.Joiner;
-
-import static java.lang.Integer.toString;
-
 /**
  * StwAndo
+ * <p>
  * Write a program that prints the numbers from 1 to 100. But for multiples of three print “Stw”
  * instead of the number and for the multiples of five print “Ando”.
  * For numbers which are multiples of both three and five print “StwAndo”.
+ * </p>
  */
 public class StwAndo {
 

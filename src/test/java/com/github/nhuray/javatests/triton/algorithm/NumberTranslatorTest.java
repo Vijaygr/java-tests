@@ -1,5 +1,6 @@
 package com.github.nhuray.javatests.triton.algorithm;
 
+import org.junit.Test;
 import org.junit.experimental.theories.DataPoints;
 import org.junit.experimental.theories.Theories;
 import org.junit.experimental.theories.Theory;
@@ -152,6 +153,28 @@ public class NumberTranslatorTest {
         // Then the digit is written in plain english
         System.out.println(number + " = " + result);
         assertEquals(thousandTranslation.getTranslation(), result);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void lowerThanZero() throws Exception {
+        // Given a number
+        int number = -678;
+
+        // When we call the method plainEnglish
+        String result = NumberTranslator.plainEnglish(number);
+
+        // Then an IllegalArgumentException is raised
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void greaterThanOneMillion() throws Exception {
+        // Given a number
+        int number = 1000000;
+
+        // When we call the method plainEnglish
+        String result = NumberTranslator.plainEnglish(number);
+
+        // Then an IllegalArgumentException is raised
     }
 
 }

@@ -1,4 +1,4 @@
-package com.github.nhuray.javatests.triton;
+package com.github.nhuray.javatests.triton.algorithm;
 
 /**
  * Algorithm

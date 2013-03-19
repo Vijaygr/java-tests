@@ -1,8 +1,8 @@
-package com.github.nhuray.javatests.triton;
+package com.github.nhuray.javatests.triton.fibonacci;
 
+import com.github.nhuray.javatests.triton.fibonacci.Fibonacci;
 import org.junit.Test;
 
-import static org.hamcrest.CoreMatchers.equalTo;
 import static org.junit.Assert.assertThat;
 
 public class FibonacciTest {

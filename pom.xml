@@ -11,6 +11,7 @@
     <properties>
         <junit.version>4.11</junit.version>
         <mockito-core.version>1.9.0</mockito-core.version>
+        <guava.version>13.0.1</guava.version>
     </properties>
 
     <dependencies>
@@ -27,8 +28,8 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>13.0.1</version>
+            <version>${guava.version}</version>
         </dependency>
-     </dependencies>
+    </dependencies>
 
 </project>

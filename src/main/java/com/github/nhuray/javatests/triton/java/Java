@@ -1,0 +1,19 @@
+Questions :
+-----------
+
+    Suppose you are using a Map.
+    How would you go about detecting the amount of times put() and get() are called on it.
+
+Réponses :
+----------
+
+
+    1) D'un point de vue programmation on peut définir un proxy via un aspect qui va intercepté l'appel
+    aux méthodes put() et get() pour déterminer le temps passé dans chacunes des méthodes.
+
+    2) Au niveau d'un IDE on peut configurer ce dernier afin de profiler le temps passé dans les méthodes put() et get()
+
+    3) Au niveau d'un serveur en production on pourra installé une librairie telle que Jamon pour visualiser le temps
+    passé dans nos méthodes (http://jamonapi.sourceforge.net/)
+
+

@@ -4,6 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * All test methods are equals but used different ways to implement a thread-safe counter
+ */
 public class ThreadSafetyTest {
 
     @Test
@@ -12,7 +15,7 @@ public class ThreadSafetyTest {
         Thread[] threads = new Thread[10];
 
         // When
-        SynchronizedCounter counter = new SynchronizedCounter();
+        Counter counter = new SynchronizedCounter();
         RunnableCounter runnable = new RunnableCounter(counter);
 
         for (int i = 0; i < threads.length; i++) {
@@ -32,7 +35,7 @@ public class ThreadSafetyTest {
         Thread[] threads = new Thread[10];
 
         // When
-        AtomicCounter counter = new AtomicCounter();
+        Counter counter = new AtomicCounter();
         RunnableCounter runnable = new RunnableCounter(counter);
 
         for (int i = 0; i < threads.length; i++) {
@@ -52,7 +55,7 @@ public class ThreadSafetyTest {
         Thread[] threads = new Thread[10];
 
         // When
-        LockedCounter counter = new LockedCounter();
+        Counter counter = new LockedCounter();
         RunnableCounter runnable = new RunnableCounter(counter);
 
         for (int i = 0; i < threads.length; i++) {

@@ -1,5 +1,7 @@
 package com.github.nhuray.javatests.triton.fibonacci;
 
+import com.google.common.base.Strings;
+
 import java.math.BigInteger;
 
 import static java.math.BigInteger.valueOf;
@@ -35,7 +37,8 @@ public class Fibonacci {
 
     /**
      * The recursive Fibonacci method is not efficient for a number of recursion too important (for example 50)
-     * and should give OutOfMemoryError because calls are .
+     * and should give StackOverflowError because memory are allocated on the stack which is a memory storage area
+     * used for method calls but the stack is limited in size (1024 kB by default).
      */
     public static void recursiveFibonacci(int n) {
         for (int i = 0; i <= n; i++) {
@@ -45,7 +48,7 @@ public class Fibonacci {
 
     /**
      * The recursive Fibonacci method is not efficient for a n of recursion too important (for example 50)
-     * and should give OutOfMemoryError.
+     * and should give StackOverflowError.
      */
     private static BigInteger fibonacci(BigInteger n) {
         if (n.intValue() == 0) return valueOf(0);

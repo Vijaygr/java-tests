@@ -8,7 +8,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  */
 public class LockedCounter implements Counter {
 
-    private int counter;
+    private int counter = 0;
     private ReadWriteLock lock = new ReentrantReadWriteLock();
 
     public void increment() {

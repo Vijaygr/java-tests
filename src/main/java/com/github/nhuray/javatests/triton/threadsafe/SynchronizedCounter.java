@@ -5,8 +5,8 @@ package com.github.nhuray.javatests.triton.threadsafe;
  */
 public class SynchronizedCounter implements Counter {
 
-    private int counter;
-    private static Object sync = new Object(); // synchronized object
+    private int counter = 0;
+    private static final Object sync = new Object(); // synchronized object
 
     public void increment() {
         synchronized (sync) {
